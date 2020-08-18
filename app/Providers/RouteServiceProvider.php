@@ -15,9 +15,9 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
-    protected $admin_namespace = 'App\Http\Controler\Admin\Controller';
-    protected $classroom_namespace = 'App\Http\Controler\Classroom\Controller';
-    protected $student_namespace = 'App\Http\Controler\Student\Controller';
+    protected $lobbynamespace = 'App\Http\Controllers\Students\Controller';
+    protected $adminnamespace = 'App\Http\Controllers\Admin\Controller';
+    protected $classroomnamespace = 'App\Http\Controllers\Classroom\Controller';
 
     /**
      * The path to the "home" route for your application.
@@ -25,9 +25,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
-    public const ADMIN = '/dashboard';
-    public const STUDENT = '/lobby';
-    public const CLASSROOM = '/classroom';
+
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -52,9 +50,9 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapStudentRoutes();
         $this->mapAdminRoutes();
         $this->mapClassroomRoutes();
-        $this->mapLobyRoutes();
 
         //
     }
@@ -73,6 +71,29 @@ class RouteServiceProvider extends ServiceProvider
             ->group(base_path('routes/web.php'));
     }
 
+
+    protected function mapStudentRoutes()
+    {
+        Route::prefix('lobby')
+            ->middleware('web')
+            ->namespace($this->lobbynamespace)
+            ->group(base_path('routes/students.php'));
+    }
+    protected function mapAdminRoutes()
+    {
+        Route::prefix('dashboard')
+            ->middleware('web')
+            ->namespace($this->adminnamespace)
+            ->group(base_path('routes/dashboard.php'));
+    }
+    protected function mapClassroomRoutes()
+    {
+        Route::prefix('classroom')
+            ->middleware('web')
+            ->namespace($this->classroomnamespace)
+            ->group(base_path('routes/classroom.php'));
+    }
+
     /**
      * Define the "api" routes for the application.
      *
@@ -88,27 +109,4 @@ class RouteServiceProvider extends ServiceProvider
             ->group(base_path('routes/api.php'));
     }
 
-    protected function mapAdminRoutes()
-    {
-        Route::prefix('dashboard')
-        ->middleware('web')
-        ->namespace($this->mapAdminRoutes)
-        ->group(base_path('routes/dashboard.php'));
-    }
-
-    protected function mapClassroomRoute()
-    {
-        Route::prefix('classroom')
-        ->middleware('web')
-        ->namespace($this->classroom_namespace)
-        ->group(base_path('classroom.php'));
-    }
-
-    protected function mapLobbyRoutes()
-    {
-        Route::prefix('lobby')
-        ->middleware('web')
-        ->namespace($this->student_namespace)
-        ->group(base_path('student.php'));
-    }
 }
