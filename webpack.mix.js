@@ -11,5 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/ui.js', 'public/js')
+    .sass('resources/sass/ui_bootstrap.scss', 'public/css')
+    .sass('resources/sass/ui.scss', 'public/css')
+    .options({
+        processCssUrls: true
+    });
+mix.browserSync('http://127.0.0.1:8000');
