@@ -1,7 +1,52 @@
+#toggle_menu {
+  cursor: pointer;
+}
+
+#toggle_menu .bar1,
+#toggle_menu .bar2,
+#toggle_menu .bar3 {
+  width: 20px;
+  height: 2px;
+  background-color: #333333;
+  margin: 4.2px 0;
+  transition: 0.4s ease;
+}
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-2px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-3px, -7px);
+}
+
 .ui-wrapper {
   width: 100%;
   height: 100vh;
   background: transparent;
+}
+
+@media (max-width: 576px) {
+  .ui-wrapper {
+    transition: 0.4s ease;
+  }
+
+  .ui-wrapper.open {
+    transition: 0.4s ease;
+    transform: translateX(270px);
+  }
+}
+
+.sidebar.fixed-left {
+  position: fixed;
+  top: 0;
+  left: -270px;
+  right: inherit;
+  bottom: 0;
 }
 
 *,

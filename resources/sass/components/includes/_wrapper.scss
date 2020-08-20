@@ -3,3 +3,15 @@
     height: 100vh;
     background: transparent;
 }
+
+
+@include breakpoint(576px, max){
+    .ui-wrapper{
+        transition: .4s ease;
+        &.open{
+            transition: .4s ease;
+transform: translateX(270px)
+        }
+
+    }
+}

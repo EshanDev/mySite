@@ -1,0 +1,9 @@
+.sidebar{
+    &.fixed-left{
+        position: fixed;
+        top: 0;
+        left: -270px;
+        right: inherit;
+        bottom: 0;
+    }
+}

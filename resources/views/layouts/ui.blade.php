@@ -14,14 +14,25 @@
 </head>
 
 <body>
-    <div class="ui-wrapper">
+
+    <div id="wrapper" class="ui-wrapper">
+        <div class="sidebar fixed-left">
+            sidebar
+        </div>
         <div class="ui top-container">
             <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-sm">
                 <div class="container-lg">
                     <a href="{{ url('/') }}" class="navbar-brand">{{ config('app.name') }}</a>
-                    <div class="offcanvas d-none d-lg-block ml-auto">
-                        <ul class="navbar-nav">
+                    <div class="offcanvas  ml-auto">
+                        <ul class="navbar-nav d-none d-sm-block">
                             <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
+                        </ul>
+                        <ul class="navbar-nav d-block d-sm-none">
+                            <li id="toggle_menu" class="nav-item nav-link" onclick="ToggleMenu(this)">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -41,8 +52,18 @@
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/ui.js') }}"></script>
+    <script src="https://kit.fontawesome.com/915c079cb9.js" crossorigin="anonymous"></script>
 
     @yield('script')
+    <script>
+
+        function ToggleMenu(x) {
+            var w = document.getElementById('wrapper');
+        x.classList.toggle('change');
+        w.classList.toggle('open');
+        };
+
+    </script>
 </body>
 
 </html>
