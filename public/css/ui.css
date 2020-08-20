@@ -4,12 +4,6 @@
   background: transparent;
 }
 
-.ui {
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
 *,
 *::before,
 *::after {

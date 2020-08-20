@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,20 @@
     <link rel="stylesheet" href="{{ asset('css/ui.css') }}">
     @yield('stylesheet')
 </head>
+
 <body>
     <div class="ui-wrapper">
         <div class="ui top-container">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expend-lg navbar-ligth bg-light shawdow-sm fixed-top mb-4">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-sm">
+                <div class="container-lg">
                     <a href="{{ url('/') }}" class="navbar-brand">{{ config('app.name') }}</a>
-                </nav>
-            </div>
+                    <div class="offcanvas d-none d-lg-block ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             @yield('top-container')
         </div>
         <div class="ui middle-container">
@@ -37,4 +44,5 @@
 
     @yield('script')
 </body>
+
 </html>
