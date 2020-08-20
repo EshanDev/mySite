@@ -7,13 +7,18 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="{{ asset('css/ui_bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/ui.css') }}">
     @yield('stylesheet')
 </head>
 <body>
     <div class="ui-wrapper">
         <div class="ui top-container">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expend-lg navbar-ligth bg-light shawdow-sm fixed-top mb-4">
+                    <a href="{{ url('/') }}" class="navbar-brand">{{ config('app.name') }}</a>
+                </nav>
+            </div>
             @yield('top-container')
         </div>
         <div class="ui middle-container">
@@ -27,8 +32,9 @@
             </div>
         </div>
     </div>
-    
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/ui.js') }}"></script>
 
-    <script src="{{ asset('js/ui.css') }}"></script>
+    @yield('script')
 </body>
 </html>

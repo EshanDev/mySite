@@ -1,5 +1,6 @@
 {
+    "/js/app.js": "/js/app.js",
     "/js/ui.js": "/js/ui.js",
-    "/css/ui_bootstrap.css": "/css/ui_bootstrap.css",
-    "/css/ui.css": "/css/ui.css"
+    "/css/ui.css": "/css/ui.css",
+    "/css/app.css": "/css/app.css"
 }
