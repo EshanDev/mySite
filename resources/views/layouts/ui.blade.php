@@ -16,11 +16,14 @@
 <body>
 
     <div id="wrapper" class="ui-wrapper">
-        <div class="sidebar fixed-left">
-            sidebar
+        <div id="overylay" class="dim-overlay" onclick="ShowHideOverlay()"></div>
+        <div class="sidebar fixed-left ">
+            <div class="content position-relative py-3 px-3">
+                content here
+            </div>
         </div>
         <div class="ui top-container">
-            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-sm">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-sm fixed-top">
                 <div class="container-lg">
                     <a href="{{ url('/') }}" class="navbar-brand">{{ config('app.name') }}</a>
                     <div class="offcanvas  ml-auto">
@@ -67,6 +70,16 @@
         x.classList.toggle('change');
         w.classList.toggle('open');
         };
+
+        function ShowHideOverlay() {
+            var w = document.getElementById('wrapper');
+            var x = document.getElementById('toggle_menu');
+            w.classList.toggle('open');
+            x.classList.toggle('change');
+
+        };
+
+
 
     </script>
 </body>

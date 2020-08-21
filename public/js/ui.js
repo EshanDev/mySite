@@ -493,7 +493,7 @@ eval("window._ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodas
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvdWkuanM/NmE5OCJdLCJuYW1lcyI6WyJyZXF1aXJlIl0sIm1hcHBpbmdzIjoiQUFBQUEsbUJBQU8sQ0FBQyxnREFBRCxDQUFQIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL2pzL3VpLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnLi9ib290c3RyYXAnKTtcclxuXHJcblxyXG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/ui.js\n");
+eval("__webpack_require__(/*! ./bootstrap */ \"./resources/js/bootstrap.js\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvdWkuanM/NmE5OCJdLCJuYW1lcyI6WyJyZXF1aXJlIl0sIm1hcHBpbmdzIjoiQUFBQUEsbUJBQU8sQ0FBQyxnREFBRCxDQUFQIiwiZmlsZSI6Ii4vcmVzb3VyY2VzL2pzL3VpLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsicmVxdWlyZSgnLi9ib290c3RyYXAnKTtcblxuXG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/ui.js\n");
 
 /***/ }),
 
@@ -526,9 +526,9 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\green\Desktop\Workshop\mySite\resources\js\ui.js */"./resources/js/ui.js");
-__webpack_require__(/*! C:\Users\green\Desktop\Workshop\mySite\resources\sass\ui.scss */"./resources/sass/ui.scss");
-module.exports = __webpack_require__(/*! C:\Users\green\Desktop\Workshop\mySite\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\mySite\resources\js\ui.js */"./resources/js/ui.js");
+__webpack_require__(/*! C:\laragon\www\mySite\resources\sass\ui.scss */"./resources/sass/ui.scss");
+module.exports = __webpack_require__(/*! C:\laragon\www\mySite\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
