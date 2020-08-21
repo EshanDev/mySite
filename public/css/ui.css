@@ -24,6 +24,18 @@
   transform: rotate(45deg) translate(-3px, -7px);
 }
 
+@media (min-width: 576px) {
+  #top_navbar.d-sm-block {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  #top_navbar.d-sm-block .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
+
 .ui-wrapper {
   width: 100%;
   height: 100vh;
