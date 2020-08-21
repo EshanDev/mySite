@@ -24,8 +24,13 @@
                 <div class="container-lg">
                     <a href="{{ url('/') }}" class="navbar-brand">{{ config('app.name') }}</a>
                     <div class="offcanvas  ml-auto">
-                        <ul class="navbar-nav d-none d-sm-block">
+                        <ul id="top_navbar" class="navbar-nav d-none d-sm-block">
+                            @guest
                             <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Register</a></li>
+                            @if(Route::has('register'))
+                            <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Login</a></li>
+                            @endif
+                            @endguest
                         </ul>
                         <ul class="navbar-nav d-block d-sm-none">
                             <li id="toggle_menu" class="nav-item nav-link" onclick="ToggleMenu(this)">
